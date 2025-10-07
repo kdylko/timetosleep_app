@@ -47,7 +47,7 @@ export function useStories(language: string = 'en', limit: number = 20) {
       }
       
       if (filters.hasAudio) {
-        filteredStories = filteredStories.filter(story => story.audio);
+        filteredStories = filteredStories.filter(story => story.hasAudio);
       }
       
       // Apply sorting

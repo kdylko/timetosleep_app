@@ -10,6 +10,7 @@ export interface Story {
   tags: string[];
   images: StoryImage[];
   audio?: StoryAudio;
+  hasAudio?: boolean; // Indicates if audio is available for this story in the current language
   createdAt: string;
   updatedAt: string;
 }

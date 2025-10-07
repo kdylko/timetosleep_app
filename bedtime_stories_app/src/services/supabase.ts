@@ -69,7 +69,8 @@ export const storiesApi = {
           title,
           description,
           content,
-          reading_time
+          reading_time,
+          hasaudio
         )
       `)
       .eq('story_translation.language', language)
@@ -95,6 +96,7 @@ export const storiesApi = {
         readingTime: storyTranslation?.reading_time || story.reading_time,
         ageGroup: story.age_group,
         slug: story.slug,
+        hasAudio: storyTranslation?.hasaudio || false,
         createdAt: story.created_at,
         updatedAt: story.updated_at
       };
@@ -133,7 +135,8 @@ export const storiesApi = {
           title,
           description,
           content,
-          reading_time
+          reading_time,
+          hasaudio
         ),
         story_audio!left (
           id,
@@ -176,6 +179,7 @@ export const storiesApi = {
       ageGroup: data.age_group,
       slug: data.slug,
       audio,
+      hasAudio: storyTranslation?.hasAudio || false,
       createdAt: data.created_at,
       updatedAt: data.updated_at
     };
@@ -213,7 +217,8 @@ export const storiesApi = {
           title,
           description,
           content,
-          reading_time
+          reading_time,
+          hasaudio
         ),
         story_audio!left (
           id,
@@ -255,6 +260,7 @@ export const storiesApi = {
       ageGroup: data.age_group,
       slug: data.slug,
       audio,
+      hasAudio: storyTranslation?.hasAudio || false,
       createdAt: data.created_at,
       updatedAt: data.updated_at
     };
@@ -292,7 +298,8 @@ export const storiesApi = {
           title,
           description,
           content,
-          reading_time
+          reading_time,
+          hasaudio
         )
       `)
       .eq('story_tags.tags.slug', tagSlug)
@@ -319,6 +326,7 @@ export const storiesApi = {
         readingTime: storyTranslation?.reading_time || story.reading_time,
         ageGroup: story.age_group,
         slug: story.slug,
+        hasAudio: storyTranslation?.hasaudio || false,
         createdAt: story.created_at,
         updatedAt: story.updated_at
       };
@@ -361,7 +369,8 @@ export const storiesApi = {
           title,
           description,
           content,
-          reading_time
+          reading_time,
+          hasaudio
         )
       `)
       .eq('story_translation.language', language)
@@ -388,6 +397,7 @@ export const storiesApi = {
         readingTime: storyTranslation?.reading_time || story.reading_time,
         ageGroup: story.age_group,
         slug: story.slug,
+        hasAudio: storyTranslation?.hasaudio || false,
         createdAt: story.created_at,
         updatedAt: story.updated_at
       };

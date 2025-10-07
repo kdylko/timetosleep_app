@@ -60,6 +60,13 @@ export default function StoryCard({
             <Text style={styles.readingTimeText}>⏱️ {story.readingTime} min</Text>
           </View>
           
+          {/* Audio Available Badge */}
+          {story.hasAudio && (
+            <View style={styles.audioBadge}>
+              <Ionicons name="headset" size={16} color="#FFFFFF" />
+            </View>
+          )}
+          
           {/* Favorite Button */}
           {onFavoritePress && (
             <TouchableOpacity 
@@ -163,6 +170,25 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 12,
     fontWeight: '500',
+  },
+  audioBadge: {
+    position: 'absolute',
+    bottom: 8,
+    right: 8,
+    backgroundColor: '#10B981',
+    borderRadius: 16,
+    width: 32,
+    height: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   favoriteButton: {
     position: 'absolute',
